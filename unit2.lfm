@@ -1,0 +1,35 @@
+object AboutForma: TAboutForma
+  Left = 984
+  Height = 276
+  Top = 256
+  Width = 600
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'About Tuxteen...'
+  ClientHeight = 276
+  ClientWidth = 600
+  OnCreate = FormCreate
+  OnResize = FormResize
+  Position = poDesktopCenter
+  LCLVersion = '2.2.6.0'
+  object InfoMemo: TMemo
+    Left = 0
+    Height = 276
+    Top = 0
+    Width = 600
+    Lines.Strings = (
+      'Tuxteen $VERSION ($BUILD_INFO)'
+      ''
+      'Yet another "15 Puzzle" game realization for Linux.'
+      'Powered by Free Pascal and Lazarus IDE.'
+      ''
+      'Code and design by: Ivan Movchan <AngelOfV0id@yandex.ru>, 2022-2023.'
+      ''
+      'This is free software released in public domain - see UNLICENSE.txt for details.'
+      ''
+      'https://github.com/AngelOfV0id/Tuxteen'
+    )
+    ReadOnly = True
+    ScrollBars = ssAutoBoth
+    TabOrder = 0
+  end
+end

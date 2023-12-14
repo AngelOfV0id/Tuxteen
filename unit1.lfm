@@ -1,0 +1,104 @@
+object MainForma: TMainForma
+  Left = 288
+  Height = 384
+  Top = 197
+  Width = 332
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'Tuxteen'
+  ClientHeight = 384
+  ClientWidth = 332
+  OnCreate = FormCreate
+  Position = poDesktopCenter
+  LCLVersion = '2.2.6.0'
+  object GameBoard: TStringGrid
+    Left = 40
+    Height = 256
+    Top = 32
+    Width = 256
+    AutoAdvance = aaNone
+    AutoEdit = False
+    ColCount = 4
+    DefaultColWidth = 64
+    DefaultDrawing = False
+    DefaultRowHeight = 64
+    ExtendedSelect = False
+    FixedCols = 0
+    FixedRows = 0
+    Flat = True
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goScrollKeepVisible, goDontScrollPartCell]
+    ParentShowHint = False
+    RowCount = 4
+    ScrollBars = ssNone
+    TabOrder = 0
+    OnClick = GameBoardClick
+  end
+  object MovesLabel: TLabel
+    Left = 40
+    Height = 18
+    Top = 8
+    Width = 102
+    Caption = 'Sample Text'
+    ParentColor = False
+  end
+  object NewGameButton: TToggleBox
+    Left = 8
+    Height = 33
+    Top = 344
+    Width = 75
+    Caption = 'New'
+    OnChange = NewGameButtonChange
+    TabOrder = 1
+  end
+  object AboutButton: TToggleBox
+    Left = 168
+    Height = 33
+    Top = 344
+    Width = 75
+    Caption = 'About'
+    OnChange = AboutButtonChange
+    TabOrder = 2
+  end
+  object ExitButton: TToggleBox
+    Left = 248
+    Height = 33
+    Top = 344
+    Width = 75
+    Caption = 'Exit'
+    OnChange = ExitButtonChange
+    TabOrder = 3
+  end
+  object LevelTrackBar: TTrackBar
+    Left = 87
+    Height = 39
+    Top = 296
+    Width = 209
+    Max = 5
+    Min = 1
+    Position = 1
+    TabOrder = 4
+  end
+  object LevelLabel: TLabel
+    Left = 40
+    Height = 18
+    Top = 296
+    Width = 50
+    Caption = 'Level:'
+    ParentColor = False
+  end
+  object PauseButton: TToggleBox
+    Left = 88
+    Height = 33
+    Top = 344
+    Width = 75
+    Caption = 'Pause'
+    OnChange = PauseButtonChange
+    TabOrder = 5
+  end
+  object PlayTimer: TTimer
+    Enabled = False
+    OnTimer = PlayTimerTimer
+    Left = 232
+    Top = 3
+  end
+end
